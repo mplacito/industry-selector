@@ -591,6 +591,9 @@
     }
 
     const sessionId = crypto.randomUUID(); // ✅ generate only once
+    console.log("Generated sessionId: ", sessionId);
+    alert("Generated session ID: " + sessionId);
+
     const payload = { industries: selected, sessionId };
 
     try {
