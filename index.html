@@ -590,27 +590,29 @@
       return;
     }
 
-    const payload = { industries: selected };
+    const sessionId = crypto.randomUUID(); // generate a unique session ID
+    const payload = { industries: selected, sessionId };
 
     try {
-      await fetch('https://script.google.com/macros/s/AKfycbxr2F8ug0H89lIqByBCGhOm25qYc_rqXdnfIJlSEZ8Rez16tLwHSIBCWZGxCjv8AeaM/exec', {
+      await fetch('https://script.google.com/macros/s/YOUR_SCRIPT_ID/exec', {
         method: 'POST',
-        mode: 'no-cors',  // Required to work from GitHub Pages
+        mode: 'no-cors',
         headers: {
           'Content-Type': 'application/json'
         },
         body: JSON.stringify(payload)
       });
 
-      // Redirect to the existing Google Form
-      window.location.href = 'https://docs.google.com/forms/d/e/1FAIpQLSec3-dTKTBznXtxTqrkm2WtCeYoHg6zl9coVTjpKDtdRyiFEg/viewform';
+      // Redirect to Google Form with session ID pre-filled
+      const formUrl = 'https://docs.google.com/forms/d/e/YOUR_FORM_ID/viewform';
+      const entryKey = 'entry.1563461814'; // your actual field key
+      window.location.href = `${formUrl}?${entryKey}=${encodeURIComponent(sessionId)}`;
 
     } catch (err) {
       alert("Submission failed: " + err.message);
     }
   });
 </script>
-
 
 </body>
 </html>
