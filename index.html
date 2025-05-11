@@ -593,25 +593,24 @@
     const payload = { industries: selected };
 
     try {
-      const response = await fetch('https://script.google.com/macros/s/AKfycbxr2F8ug0H89lIqByBCGhOm25qYc_rqXdnfIJlSEZ8Rez16tLwHSIBCWZGxCjv8AeaM/exec', {
+      await fetch('https://script.google.com/macros/s/AKfycbxr2F8ug0H89lIqByBCGhOm25qYc_rqXdnfIJlSEZ8Rez16tLwHSIBCWZGxCjv8AeaM/exec', {
         method: 'POST',
-        body: JSON.stringify(payload),
-        headers: { 'Content-Type': 'application/json' }
+        mode: 'no-cors',  // Required to work from GitHub Pages
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(payload)
       });
 
-      const result = await response.json();
+      // Redirect to the existing Google Form
+      window.location.href = 'https://docs.google.com/forms/d/e/1FAIpQLSec3-dTKTBznXtxTqrkm2WtCeYoHg6zl9coVTjpKDtdRyiFEg/viewform';
 
-      if (result.status === 'success') {
-        // Redirect to your Google Form (no industry question here)
-        window.location.href = 'https://docs.google.com/forms/d/e/1FAIpQLSec3-dTKTBznXtxTqrkm2WtCeYoHg6zl9coVTjpKDtdRyiFEg/viewform';
-      } else {
-        alert("There was a problem. Please try again.");
-      }
     } catch (err) {
       alert("Submission failed: " + err.message);
     }
   });
 </script>
+
 
 </body>
 </html>
