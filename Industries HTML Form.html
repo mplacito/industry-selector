@@ -1,0 +1,618 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Industry/Sector Selection</title>
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css?family=Roboto:400,500&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Roboto', sans-serif;
+      background-color: #f8f9fa;
+      display: flex;
+      justify-content: center;
+      padding: 40px;
+      margin: 0;
+    }
+    .form-container {
+      background: #fff;
+      border-radius: 8px;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+      padding: 24px;
+      max-width: 900px;
+      width: 100%;
+    }
+    h2 {
+      margin-top: 0;
+      font-weight: 500;
+      color: #202124;
+    }
+    #search {
+      width: 100%;
+      padding: 10px 12px;
+      margin-bottom: 20px;
+      border: 1px solid #dadce0;
+      border-radius: 4px;
+      font-size: 1rem;
+      box-sizing: border-box;
+    }
+    .section {
+      margin-top: 24px;
+    }
+    .section-header {
+      font-size: 1.1rem;
+      font-weight: 500;
+      margin-bottom: 12px;
+      color: #202124;
+    }
+    .checkbox-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+      gap: 8px 24px;
+    }
+    .checkbox-wrapper {
+      display: flex;
+      align-items: center;
+    }
+    .checkbox-wrapper input[type="checkbox"] {
+      margin-right: 12px;
+      width: 18px;
+      height: 18px;
+      cursor: pointer;
+    }
+    .checkbox-wrapper span {
+      font-size: 1rem;
+      color: #3c4043;
+      cursor: pointer;
+    }
+    .submit-button {
+      margin-top: 32px;
+      background-color: #1a73e8;
+      color: #fff;
+      border: none;
+      border-radius: 4px;
+      padding: 10px 16px;
+      font-size: 1rem;
+      cursor: pointer;
+    }
+    .submit-button:hover {
+      background-color: #1669c1;
+    }
+  </style>
+</head>
+<body>
+  <div class="form-container">
+    <form action="#" method="post">
+      <h2>Industry/Sector (Select all that apply)</h2>
+      <input type="text" id="search" placeholder="Search industries…">
+
+      <!-- 1. Primary Industries -->
+      <div class="section">
+        <div class="section-header">Primary Industries</div>
+        <div class="checkbox-grid">
+          <label class="checkbox-wrapper">
+            <input type="checkbox" name="industry" value="Agriculture">
+            <span>Agriculture</span>
+          </label>
+          <label class="checkbox-wrapper">
+            <input type="checkbox" name="industry" value="Forestry">
+            <span>Forestry</span>
+          </label>
+          <label class="checkbox-wrapper">
+            <input type="checkbox" name="industry" value="Fishing & Aquaculture">
+            <span>Fishing & Aquaculture</span>
+          </label>
+          <label class="checkbox-wrapper">
+            <input type="checkbox" name="industry" value="Mining & Extraction">
+            <span>Mining & Extraction</span>
+          </label>
+          <label class="checkbox-wrapper">
+            <input type="checkbox" name="industry" value="Oil & Gas">
+            <span>Oil & Gas</span>
+          </label>
+        </div>
+      </div>
+
+      <!-- 2. Manufacturing & Production -->
+      <div class="section">
+        <div class="section-header">Manufacturing & Production</div>
+        <div class="checkbox-grid">
+          <label class="checkbox-wrapper">
+            <input type="checkbox" name="industry" value="Food & Beverage Manufacturing">
+            <span>Food & Beverage Manufacturing</span>
+          </label>
+          <label class="checkbox-wrapper">
+            <input type="checkbox" name="industry" value="Textiles & Apparel">
+            <span>Textiles & Apparel</span>
+          </label>
+          <label class="checkbox-wrapper">
+            <input type="checkbox" name="industry" value="Chemicals & Pharmaceuticals">
+            <span>Chemicals & Pharmaceuticals</span>
+          </label>
+          <label class="checkbox-wrapper">
+            <input type="checkbox" name="industry" value="Electronics & Semiconductors">
+            <span>Electronics & Semiconductors</span>
+          </label>
+          <label class="checkbox-wrapper">
+            <input type="checkbox" name="industry" value="Automotive">
+            <span>Automotive</span>
+          </label>
+          <label class="checkbox-wrapper">
+            <input type="checkbox" name="industry" value="Aerospace & Aviation">
+            <span>Aerospace & Aviation</span>
+          </label>
+          <label class="checkbox-wrapper">
+            <input type="checkbox" name="industry" value="Plastics & Packaging">
+            <span>Plastics & Packaging</span>
+          </label>
+          <label class="checkbox-wrapper">
+            <input type="checkbox" name="industry" value="Construction Materials">
+            <span>Construction Materials</span>
+          </label>
+          <label class="checkbox-wrapper">
+            <input type="checkbox" name="industry" value="Furniture & Home Goods">
+            <span>Furniture & Home Goods</span>
+          </label>
+          <label class="checkbox-wrapper">
+            <input type="checkbox" name="industry" value="Heavy Machinery & Equipment">
+            <span>Heavy Machinery & Equipment</span>
+          </label>
+        </div>
+      </div>
+
+      <!-- 3. Energy & Utilities -->
+      <div class="section">
+        <div class="section-header">Energy & Utilities</div>
+        <div class="checkbox-grid">
+          <label class="checkbox-wrapper">
+            <input type="checkbox" name="industry" value="Renewable Energy (Solar, Wind, Hydro, etc.)">
+            <span>Renewable Energy (Solar, Wind, Hydro, etc.)</span>
+          </label>
+          <label class="checkbox-wrapper">
+            <input type="checkbox" name="industry" value="Oil & Gas">
+            <span>Oil & Gas</span>
+          </label>
+          <label class="checkbox-wrapper">
+            <input type="checkbox" name="industry" value="Utilities (Electricity, Water, Waste)">
+            <span>Utilities (Electricity, Water, Waste)</span>
+          </label>
+          <label class="checkbox-wrapper">
+            <input type="checkbox" name="industry" value="Energy Storage & Batteries">
+            <span>Energy Storage & Batteries</span>
+          </label>
+          <label class="checkbox-wrapper">
+            <input type="checkbox" name="industry" value="Nuclear Energy">
+            <span>Nuclear Energy</span>
+          </label>
+        </div>
+      </div>
+
+      <!-- 4. Technology & Innovation -->
+      <div class="section">
+        <div class="section-header">Technology & Innovation</div>
+        <div class="checkbox-grid">
+          <label class="checkbox-wrapper">
+            <input type="checkbox" name="industry" value="Information Technology (IT)">
+            <span>Information Technology (IT)</span>
+          </label>
+          <label class="checkbox-wrapper">
+            <input type="checkbox" name="industry" value="Software & SaaS">
+            <span>Software & SaaS</span>
+          </label>
+          <label class="checkbox-wrapper">
+            <input type="checkbox" name="industry" value="Artificial Intelligence">
+            <span>Artificial Intelligence</span>
+          </label>
+          <label class="checkbox-wrapper">
+            <input type="checkbox" name="industry" value="Cybersecurity">
+            <span>Cybersecurity</span>
+          </label>
+          <label class="checkbox-wrapper">
+            <input type="checkbox" name="industry" value="Fintech">
+            <span>Fintech</span>
+          </label>
+          <label class="checkbox-wrapper">
+            <input type="checkbox" name="industry" value="Blockchain">
+            <span>Blockchain</span>
+          </label>
+          <label class="checkbox-wrapper">
+            <input type="checkbox" name="industry" value="Hardware & Electronics">
+            <span>Hardware & Electronics</span>
+          </label>
+        </div>
+      </div>
+
+      <!-- 5. Financial Services -->
+      <div class="section">
+        <div class="section-header">Financial Services</div>
+        <div class="checkbox-grid">
+          <label class="checkbox-wrapper">
+            <input type="checkbox" name="industry" value="Banking">
+            <span>Banking</span>
+          </label>
+          <label class="checkbox-wrapper">
+            <input type="checkbox" name="industry" value="Insurance">
+            <span>Insurance</span>
+          </label>
+          <label class="checkbox-wrapper">
+            <input type="checkbox" name="industry" value="Investment & Asset Management">
+            <span>Investment & Asset Management</span>
+          </label>
+          <label class="checkbox-wrapper">
+            <input type="checkbox" name="industry" value="Accounting & Audit">
+            <span>Accounting & Audit</span>
+          </label>
+          <label class="checkbox-wrapper">
+            <input type="checkbox" name="industry" value="Venture Capital / Private Equity">
+            <span>Venture Capital / Private Equity</span>
+          </label>
+          <label class="checkbox-wrapper">
+            <input type="checkbox" name="industry" value="Microfinance">
+            <span>Microfinance</span>
+          </label>
+        </div>
+      </div>
+
+      <!-- 6. Retail & Consumer Goods -->
+      <div class="section">
+        <div class="section-header">Retail & Consumer Goods</div>
+        <div class="checkbox-grid">
+          <label class="checkbox-wrapper">
+            <input type="checkbox" name="industry" value="E-commerce">
+            <span>E-commerce</span>
+          </label>
+          <label class="checkbox-wrapper">
+            <input type="checkbox" name="industry" value="Fashion & Apparel">
+            <span>Fashion & Apparel</span>
+          </label>
+          <label class="checkbox-wrapper">
+            <input type="checkbox" name="industry" value="Consumer Electronics">
+            <span>Consumer Electronics</span>
+          </label>
+          <label class="checkbox-wrapper">
+            <input type="checkbox" name="industry" value="Food & Beverage Retail">
+            <span>Food & Beverage Retail</span>
+          </label>
+          <label class="checkbox-wrapper">
+            <input type="checkbox" name="industry" value="Beauty & Personal Care">
+            <span>Beauty & Personal Care</span>
+          </label>
+          <label class="checkbox-wrapper">
+            <input type="checkbox" name="industry" value="Furniture & Home Goods">
+            <span>Furniture & Home Goods</span>
+          </label>
+          <label class="checkbox-wrapper">
+            <input type="checkbox" name="industry" value="Luxury Goods">
+            <span>Luxury Goods</span>
+          </label>
+        </div>
+      </div>
+
+      <!-- 7. Transportation & Logistics -->
+      <div class="section">
+        <div class="section-header">Transportation & Logistics</div>
+        <div class="checkbox-grid">
+          <label class="checkbox-wrapper">
+            <input type="checkbox" name="industry" value="Shipping & Maritime">
+            <span>Shipping & Maritime</span>
+          </label>
+          <label class="checkbox-wrapper">
+            <input type="checkbox" name="industry" value="Aviation">
+            <span>Aviation</span>
+          </label>
+          <label class="checkbox-wrapper">
+            <input type="checkbox" name="industry" value="Rail">
+            <span>Rail</span>
+          </label>
+          <label class="checkbox-wrapper">
+            <input type="checkbox" name="industry" value="Automotive & Mobility">
+            <span>Automotive & Mobility</span>
+          </label>
+          <label class="checkbox-wrapper">
+            <input type="checkbox" name="industry" value="Logistics & Supply Chain">
+            <span>Logistics & Supply Chain</span>
+          </label>
+          <label class="checkbox-wrapper">
+            <input type="checkbox" name="industry" value="Warehousing & Distribution">
+            <span>Warehousing & Distribution</span>
+          </label>
+          <label class="checkbox-wrapper">
+            <input type="checkbox" name="industry" value="Courier & Delivery Services">
+            <span>Courier & Delivery Services</span>
+          </label>
+        </div>
+      </div>
+
+      <!-- 8. Construction & Real Estate -->
+      <div class="section">
+        <div class="section-header">Construction & Real Estate</div>
+        <div class="checkbox-grid">
+          <label class="checkbox-wrapper">
+            <input type="checkbox" name="industry" value="Construction">
+            <span>Construction</span>
+          </label>
+          <label class="checkbox-wrapper">
+            <input type="checkbox" name="industry" value="Real Estate Development">
+            <span>Real Estate Development</span>
+          </label>
+          <label class="checkbox-wrapper">
+            <input type="checkbox" name="industry" value="Property Management">
+            <span>Property Management</span>
+          </label>
+          <label class="checkbox-wrapper">
+            <input type="checkbox" name="industry" value="Urban Planning">
+            <span>Urban Planning</span>
+          </label>
+          <label class="checkbox-wrapper">
+            <input type="checkbox" name="industry" value="Green Building & Architecture">
+            <span>Green Building & Architecture</span>
+          </label>
+        </div>
+      </div>
+
+      <!-- 9. Healthcare & Life Sciences -->
+      <div class="section">
+        <div class="section-header">Healthcare & Life Sciences</div>
+        <div class="checkbox-grid">
+          <label class="checkbox-wrapper">
+            <input type="checkbox" name="industry" value="Hospitals & Clinics">
+            <span>Hospitals & Clinics</span>
+          </label>
+          <label class="checkbox-wrapper">
+            <input type="checkbox" name="industry" value="Pharmaceuticals">
+            <span>Pharmaceuticals</span>
+          </label>
+          <label class="checkbox-wrapper">
+            <input type="checkbox" name="industry" value="Biotechnology">
+            <span>Biotechnology</span>
+          </label>
+          <label class="checkbox-wrapper">
+            <input type="checkbox" name="industry" value="Medical Devices">
+            <span>Medical Devices</span>
+          </label>
+          <label class="checkbox-wrapper">
+            <input type="checkbox" name="industry" value="Health-Tech">
+            <span>Health-Tech</span>
+          </label>
+          <label class="checkbox-wrapper">
+            <input type="checkbox" name="industry" value="Telemedicine">
+            <span>Telemedicine</span>
+          </label>
+        </div>
+      </div>
+
+      <!-- 10. Media & Communications -->
+      <div class="section">
+        <div class="section-header">Media & Communications</div>
+        <div class="checkbox-grid">
+          <label class="checkbox-wrapper">
+            <input type="checkbox" name="industry" value="Advertising & Marketing">
+            <span>Advertising & Marketing</span>
+          </label>
+          <label class="checkbox-wrapper">
+            <input type="checkbox" name="industry" value="Journalism & News">
+            <span>Journalism & News</span>
+          </label>
+          <label class="checkbox-wrapper">
+            <input type="checkbox" name="industry" value="Broadcasting (TV, Radio)">
+            <span>Broadcasting (TV, Radio)</span>
+          </label>
+          <label class="checkbox-wrapper">
+            <input type="checkbox" name="industry" value="Film & Entertainment">
+            <span>Film & Entertainment</span>
+          </label>
+          <label class="checkbox-wrapper">
+            <input type="checkbox" name="industry" value="Publishing">
+            <span>Publishing</span>
+          </label>
+          <label class="checkbox-wrapper">
+            <input type="checkbox" name="industry" value="Social Media Platforms">
+            <span>Social Media Platforms</span>
+          </label>
+        </div>
+      </div>
+
+      <!-- 11. Education & Training -->
+      <div class="section">
+        <div class="section-header">Education & Training</div>
+        <div class="checkbox-grid">
+          <label class="checkbox-wrapper">
+            <input type="checkbox" name="industry" value="Edtech">
+            <span>Edtech</span>
+          </label>
+          <label class="checkbox-wrapper">
+            <input type="checkbox" name="industry" value="Corporate Training & Development">
+            <span>Corporate Training & Development</span>
+          </label>
+          <label class="checkbox-wrapper">
+            <input type="checkbox" name="industry" value="Private Education Providers">
+            <span>Private Education Providers</span>
+          </label>
+          <label class="checkbox-wrapper">
+            <input type="checkbox" name="industry" value="Language & Skills Training">
+            <span>Language & Skills Training</span>
+          </label>
+        </div>
+      </div>
+
+      <!-- 12. Hospitality & Tourism -->
+      <div class="section">
+        <div class="section-header">Hospitality & Tourism</div>
+        <div class="checkbox-grid">
+          <label class="checkbox-wrapper">
+            <input type="checkbox" name="industry" value="Hotels & Resorts">
+            <span>Hotels & Resorts</span>
+          </label>
+          <label class="checkbox-wrapper">
+            <input type="checkbox" name="industry" value="Travel Agencies & Tour Operators">
+            <span>Travel Agencies & Tour Operators</span>
+          </label>
+          <label class="checkbox-wrapper">
+            <input type="checkbox" name="industry" value="Food Service & Restaurants">
+            <span>Food Service & Restaurants</span>
+          </label>
+          <label class="checkbox-wrapper">
+            <input type="checkbox" name="industry" value="Event Management">
+            <span>Event Management</span>
+          </label>
+          <label class="checkbox-wrapper">
+            <input type="checkbox" name="industry" value="Airlines & Cruise Lines">
+            <span>Airlines & Cruise Lines</span>
+          </label>
+        </div>
+      </div>
+
+      <!-- 13. Legal & Professional Services -->
+      <div class="section">
+        <div class="section-header">Legal & Professional Services</div>
+        <div class="checkbox-grid">
+          <label class="checkbox-wrapper">
+            <input type="checkbox" name="industry" value="Legal Services">
+            <span>Legal Services</span>
+          </label>
+          <label class="checkbox-wrapper">
+            <input type="checkbox" name="industry" value="Consulting">
+            <span>Consulting</span>
+          </label>
+          <label class="checkbox-wrapper">
+            <input type="checkbox" name="industry" value="Accounting & Audit">
+            <span>Accounting & Audit</span>
+          </label>
+          <label class="checkbox-wrapper">
+            <input type="checkbox" name="industry" value="HR & Staffing">
+            <span>HR & Staffing</span>
+          </label>
+          <label class="checkbox-wrapper">
+            <input type="checkbox" name="industry" value="Market Research">
+            <span>Market Research</span>
+          </label>
+        </div>
+      </div>
+
+      <!-- 14. Public Services & Government Contractors -->
+      <div class="section">
+        <div class="section-header">Public Services & Government Contractors</div>
+        <div class="checkbox-grid">
+          <label class="checkbox-wrapper">
+            <input type="checkbox" name="industry" value="Government-Funded Corporations">
+            <span>Government-Funded Corporations</span>
+          </label>
+          <label class="checkbox-wrapper">
+            <input type="checkbox" name="industry" value="Infrastructure Development">
+            <span>Infrastructure Development</span>
+          </label>
+          <label class="checkbox-wrapper">
+            <input type="checkbox" name="industry" value="Public-Private Partnerships">
+            <span>Public-Private Partnerships</span>
+          </label>
+          <label class="checkbox-wrapper">
+            <input type="checkbox" name="industry" value="Defence Contractors">
+            <span>Defence Contractors</span>
+          </label>
+        </div>
+      </div>
+
+      <!-- 15. Environmental & Sustainability Services -->
+      <div class="section">
+        <div class="section-header">Environmental & Sustainability Services</div>
+        <div class="checkbox-grid">
+          <label class="checkbox-wrapper">
+            <input type="checkbox" name="industry" value="Environmental Consulting">
+            <span>Environmental Consulting</span>
+          </label>
+          <label class="checkbox-wrapper">
+            <input type="checkbox" name="industry" value="Waste Management">
+            <span>Waste Management</span>
+          </label>
+          <label class="checkbox-wrapper">
+            <input type="checkbox" name="industry" value="Water & Sanitation Services">
+            <span>Water & Sanitation Services</span>
+          </label>
+          <label class="checkbox-wrapper">
+            <input type="checkbox" name="industry" value="Carbon Offsetting & Trading">
+            <span>Carbon Offsetting & Trading</span>
+          </label>
+          <label class="checkbox-wrapper">
+            <input type="checkbox" name="industry" value="Circular Economy Solutions">
+            <span>Circular Economy Solutions</span>
+          </label>
+        </div>
+      </div>
+
+      <!-- 16. Other -->
+      <div class="section">
+        <div class="section-header">Other</div>
+        <div class="checkbox-grid">
+          <label class="checkbox-wrapper">
+            <input type="checkbox" name="industry" value="Holding Companies">
+            <span>Holding Companies</span>
+          </label>
+          <label class="checkbox-wrapper">
+            <input type="checkbox" name="industry" value="Multinational Conglomerates">
+            <span>Multinational Conglomerates</span>
+          </label>
+          <label class="checkbox-wrapper">
+            <input type="checkbox" name="industry" value="Non-sector-specific / Diversified">
+            <span>Non-sector-specific / Diversified</span>
+          </label>
+        </div>
+      </div>
+
+      <button type="submit" class="submit-button">Submit</button>
+    </form>
+  </div>
+
+  <script>
+    document.getElementById('search').addEventListener('input', function(e) {
+      const term = e.target.value.toLowerCase();
+      document.querySelectorAll('.checkbox-wrapper').forEach(wrapper => {
+        wrapper.style.display = wrapper.textContent.toLowerCase().includes(term)
+          ? 'flex' : 'none';
+      });
+      document.querySelectorAll('.section').forEach(sec => {
+        const any = Array.from(sec.querySelectorAll('.checkbox-wrapper'))
+          .some(w => w.style.display !== 'none');
+        sec.style.display = any ? 'block' : 'none';
+      });
+    });
+  </script>
+
+<script>
+  document.querySelector('form').addEventListener('submit', async function(e) {
+    e.preventDefault();
+
+    const selected = Array.from(document.querySelectorAll('input[name="industry"]:checked'))
+                          .map(cb => cb.value);
+
+    if (selected.length === 0) {
+      alert("Please select at least one industry.");
+      return;
+    }
+
+    const payload = { industries: selected };
+
+    try {
+      const response = await fetch('https://script.google.com/macros/s/AKfycbxr2F8ug0H89lIqByBCGhOm25qYc_rqXdnfIJlSEZ8Rez16tLwHSIBCWZGxCjv8AeaM/exec', {
+        method: 'POST',
+        body: JSON.stringify(payload),
+        headers: { 'Content-Type': 'application/json' }
+      });
+
+      const result = await response.json();
+
+      if (result.status === 'success') {
+        // Redirect to your Google Form (no industry question here)
+        window.location.href = 'https://docs.google.com/forms/d/e/1FAIpQLSec3-dTKTBznXtxTqrkm2WtCeYoHg6zl9coVTjpKDtdRyiFEg/viewform';
+      } else {
+        alert("There was a problem. Please try again.");
+      }
+    } catch (err) {
+      alert("Submission failed: " + err.message);
+    }
+  });
+</script>
+
+</body>
+</html>
+
