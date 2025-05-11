@@ -590,20 +590,26 @@
       return;
     }
 
-    const sessionId = crypto.randomUUID(); // ✅ generate only once
+    const sessionId = crypto.randomUUID();
+    const payload = { industries: selected, sessionId };
+
+    // Debug
     console.log("Generated sessionId: ", sessionId);
     alert("Generated session ID: " + sessionId);
 
-    const payload = { industries: selected, sessionId };
-
     try {
-      await fetch('https://script.google.com/macros/s/AKfycbxr2F8ug0H89lIqByBCGhOm25qYc_rqXdnfIJlSEZ8Rez16tLwHSIBCWZGxCjv8AeaM/exec', {
-        method: 'POST',
-        mode: 'no-cors',
-        headers: {
-          'Content-Type': 'application/json'
-        },
-        body: JSON.stringify(payload)
+      await new Promise(resolve => {
+        fetch('https://script.google.com/macros/s/AKfycbxr2F8ug0H89lIqByBCGhOm25qYc_rqXdnfIJlSEZ8Rez16tLwHSIBCWZGxCjv8AeaM/exec', {
+          method: 'POST',
+          mode: 'no-cors',
+          headers: {
+            'Content-Type': 'application/json'
+          },
+          body: JSON.stringify(payload)
+        });
+
+        // Add a delay before redirecting
+        setTimeout(resolve, 1000); // wait 1 second to ensure fetch goes through
       });
 
       const formUrl = 'https://docs.google.com/forms/d/e/1FAIpQLSec3-dTKTBznXtxTqrkm2WtCeYoHg6zl9coVTjpKDtdRyiFEg/viewform';
