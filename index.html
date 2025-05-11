@@ -594,7 +594,7 @@
     const payload = { industries: selected, sessionId };
 
     try {
-      await fetch('https://script.google.com/macros/s/YOUR_SCRIPT_ID/exec', {
+      await fetch('https://script.google.com/macros/s/AKfycbxr2F8ug0H89lIqByBCGhOm25qYc_rqXdnfIJlSEZ8Rez16tLwHSIBCWZGxCjv8AeaM/exec', {
         method: 'POST',
         mode: 'no-cors',
         headers: {
@@ -604,7 +604,7 @@
       });
 
       // Redirect to Google Form with session ID pre-filled
-      const formUrl = 'https://docs.google.com/forms/d/e/YOUR_FORM_ID/viewform';
+      const formUrl = 'https://docs.google.com/forms/d/e/1FAIpQLSec3-dTKTBznXtxTqrkm2WtCeYoHg6zl9coVTjpKDtdRyiFEg/viewform';
       const entryKey = 'entry.1563461814'; // your actual field key
       window.location.href = `${formUrl}?${entryKey}=${encodeURIComponent(sessionId)}`;
 
