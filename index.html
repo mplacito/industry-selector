@@ -590,7 +590,7 @@
       return;
     }
 
-    const sessionId = crypto.randomUUID(); // generate a unique session ID
+    const sessionId = crypto.randomUUID(); // ✅ generate only once
     const payload = { industries: selected, sessionId };
 
     try {
@@ -603,9 +603,8 @@
         body: JSON.stringify(payload)
       });
 
-      // Redirect to Google Form with session ID pre-filled
       const formUrl = 'https://docs.google.com/forms/d/e/1FAIpQLSec3-dTKTBznXtxTqrkm2WtCeYoHg6zl9coVTjpKDtdRyiFEg/viewform';
-      const entryKey = 'entry.1563461814'; // your actual field key
+      const entryKey = 'entry.1563461814';
       window.location.href = `${formUrl}?${entryKey}=${encodeURIComponent(sessionId)}`;
 
     } catch (err) {
